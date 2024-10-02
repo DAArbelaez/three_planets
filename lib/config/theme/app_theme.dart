@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:three_planets/utils/constants/app_color_constants.dart';
+import 'package:three_planets/constants/app_color_constants.dart';
 
 final lightTheme = ThemeData(
   fontFamily: 'Poppins',
