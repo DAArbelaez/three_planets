@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:three_planets/src/presentation/pages/home_screen.dart';
+import 'package:three_planets/src/presentation/pages/home/home_screen.dart';
 
 /// Get the routes used by navigate in the app
 var appRoutes = GoRouter(
