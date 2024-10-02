@@ -18,6 +18,17 @@ class PlanetListController extends _$PlanetListController {
   }
 
   PlanetListState _createState(List<PlanetModel> planets) {
-    return PlanetListState(planetList: planets);
+    return PlanetListState(
+      planetList: planets,
+      planetListFiltered: planets,
+    );
+  }
+
+  void filterByQuery(String query) {
+    if (state.value == null) return;
+
+    final filteredList = state.value?.planetList.where((planet) => planet.matchesQuery(query)).toList();
+
+    state = AsyncValue.data(state.value!.copyWith(planetListFiltered: filteredList));
   }
 }
