@@ -7,12 +7,12 @@ part of 'planet_list_controller.dart';
 // **************************************************************************
 
 String _$planetListControllerHash() =>
-    r'734925c5992c3bf34be75b9eb6d7ef9cedcf0d16';
+    r'3b64c5d97b65c6d28eae46cf2201cd90b9f0efd4';
 
 /// See also [PlanetListController].
 @ProviderFor(PlanetListController)
-final planetListControllerProvider = AutoDisposeAsyncNotifierProvider<
-    PlanetListController, PlanetListState>.internal(
+final planetListControllerProvider =
+    AsyncNotifierProvider<PlanetListController, PlanetListState>.internal(
   PlanetListController.new,
   name: r'planetListControllerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -22,6 +22,6 @@ final planetListControllerProvider = AutoDisposeAsyncNotifierProvider<
   allTransitiveDependencies: null,
 );
 
-typedef _$PlanetListController = AutoDisposeAsyncNotifier<PlanetListState>;
+typedef _$PlanetListController = AsyncNotifier<PlanetListState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

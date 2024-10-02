@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:three_planets/src/presentation/pages/home/home_screen.dart';
-import 'package:three_planets/src/presentation/pages/planet_list/controller/planet_list_controller.dart';
-import 'package:three_planets/src/presentation/pages/planet_list/planet_list_container.dart';
+import 'package:three_planets/src/presentation/screens/home/home_screen.dart';
+import 'package:three_planets/src/presentation/screens/planet_list/controller/planet_list_controller.dart';
+import 'package:three_planets/src/presentation/screens/planet_list/planet_list_container.dart';
 
 class PlanetListScreen extends ConsumerWidget {
   static const name = 'planets';
