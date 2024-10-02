@@ -7,3 +7,4 @@ const Color kCanyonBronze = Color(0XFF2F323A);
 const Color kGreen = Color(0XFF159700);
 const Color kSilver = Color(0XFFB1B1B1);
 const Color kWhite = Color(0xFFFFFFFF);
+const Color kGreyDisable = Color(0xFF888888);
