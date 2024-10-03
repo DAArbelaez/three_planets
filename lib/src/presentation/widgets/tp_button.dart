@@ -11,6 +11,8 @@ class TPButton extends StatelessWidget {
     required this.onPressed,
     this.buttonStyle,
     this.textStyle,
+    this.buttonHeight = kTPButtonHeight,
+    this.icon,
   });
 
   final bool isEnabled;
@@ -18,18 +20,30 @@ class TPButton extends StatelessWidget {
   final VoidCallback onPressed;
   final ButtonStyle? buttonStyle;
   final TextStyle? textStyle;
+  final double buttonHeight;
+  final Widget? icon;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: kTPButtonHeight,
+      height: buttonHeight,
       width: double.infinity,
       child: TextButton(
         style: buttonStyle ?? kTPButtonStyle,
         onPressed: isEnabled ? onPressed : null,
-        child: Text(
-          txtLabel,
-          style: textStyle ?? kTPButtonTextStyle,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (icon != null)
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: icon,
+              ),
+            Text(
+              txtLabel,
+              style: textStyle ?? kTPButtonTextStyle,
+            ),
+          ],
         ),
       ),
     );

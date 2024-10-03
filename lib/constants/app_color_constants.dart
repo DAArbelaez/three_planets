@@ -8,3 +8,4 @@ const Color kGreen = Color(0XFF159700);
 const Color kSilver = Color(0XFFB1B1B1);
 const Color kWhite = Color(0xFFFFFFFF);
 const Color kGreyDisable = Color(0xFF888888);
+const Color kMyrtleGreenWithOpacity = Color.fromRGBO(53, 60, 97, 0.55);
