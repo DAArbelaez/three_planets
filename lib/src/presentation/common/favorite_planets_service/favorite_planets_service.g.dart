@@ -7,7 +7,7 @@ part of 'favorite_planets_service.dart';
 // **************************************************************************
 
 String _$favoritePlanetsServiceHash() =>
-    r'dc2bc8bb03f19420cfd0538c67979dec64ce29b9';
+    r'f3abf4237e71d0a7f431912befc45fdac13e7bd7';
 
 /// See also [FavoritePlanetsService].
 @ProviderFor(FavoritePlanetsService)

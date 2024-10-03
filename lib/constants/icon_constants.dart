@@ -18,3 +18,5 @@ const kAtmosphereCompositionIcon = Icon(Icons.cloud, color: kMyrtleGreenWithOpac
 const kMoonsIcon = Icon(Icons.brightness_2, color: kMyrtleGreenWithOpacity, size: 20);
 
 const k404NotFoundIcon = Icon(Icons.sentiment_very_dissatisfied, color: kMyrtleGreenWithOpacity, size: 100);
+
+const kWarningIcon = Icon(Icons.warning, color: kMyrtleGreenWithOpacity, size: 100);

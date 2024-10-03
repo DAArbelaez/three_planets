@@ -10,7 +10,6 @@ class DioConfig {
     dio.options = BaseOptions(
       receiveTimeout: kD30,
       connectTimeout: kD30,
-      contentType: 'application/json',
       baseUrl: kUrlBase,
     );
     return dio;

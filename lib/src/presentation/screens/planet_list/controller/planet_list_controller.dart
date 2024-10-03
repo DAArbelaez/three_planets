@@ -8,12 +8,12 @@ part 'planet_list_controller.g.dart';
 @Riverpod(keepAlive: true)
 class PlanetListController extends _$PlanetListController {
   @override
-  Future<PlanetListState> build() {
+  Future<PlanetListState?> build() {
     final PlanetsUseCase useCase = PlanetsUseCaseImpl();
 
     return useCase.fetchPlanets().then(
           (planets) => _createState(planets),
-          onError: (error) => state = AsyncValue.data(_createState([])),
+          onError: (error) => state = const AsyncValue.data(null),
         );
   }
 
