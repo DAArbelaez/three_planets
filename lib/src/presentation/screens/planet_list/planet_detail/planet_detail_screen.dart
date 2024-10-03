@@ -23,11 +23,11 @@ class PlanetDetailScreen extends ConsumerWidget {
     final planetImage = ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: FadeInImage.assetNetwork(
-        placeholder: 'assets/images/image-not-found.png',
+        placeholder: 'assets/images/image_not_found.png',
         image: controller?.image ?? '',
         fit: BoxFit.cover,
         imageErrorBuilder: (context, error, stackTrace) {
-          return Image.asset('assets/images/image-not-found.png');
+          return Image.asset('assets/images/image_not_found.png');
         },
       ),
     );
