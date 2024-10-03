@@ -7,7 +7,7 @@ part of 'planet_detail_controller.dart';
 // **************************************************************************
 
 String _$planetDetailControllerHash() =>
-    r'1c0e86b381fa5b9c3f520092f42cf0ffb2b9062e';
+    r'30d5d9b1e72c20f4845b10c6acc26640bacdd484';
 
 /// Copied from Dart SDK
 class _SystemHash {
