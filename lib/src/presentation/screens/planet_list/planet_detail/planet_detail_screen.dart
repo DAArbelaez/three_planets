@@ -22,12 +22,22 @@ class PlanetDetailScreen extends ConsumerWidget {
 
     final planetImage = ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: FadeInImage.assetNetwork(
-        placeholder: 'assets/images/image_not_found.png',
-        image: controller?.image ?? '',
+      child: Image.network(
+        controller?.image ?? '',
         fit: BoxFit.cover,
-        imageErrorBuilder: (context, error, stackTrace) {
-          return Image.asset('assets/images/image_not_found.png');
+        errorBuilder: (_, __, ___) => Image.asset('assets/images/image_not_found.png'),
+        loadingBuilder: (context, child, loadingProgress) {
+          if (loadingProgress == null) {
+            return child;
+          }
+
+          return Center(
+            child: CircularProgressIndicator(
+              value: loadingProgress?.expectedTotalBytes != null
+                  ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!
+                  : null,
+            ),
+          );
         },
       ),
     );
@@ -75,7 +85,7 @@ class PlanetDetailScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: kPagePadding,
+        padding: kPagePadding.copyWith(bottom: 20),
         child: Visibility(
           visible: controller?.isLoading == false,
           replacement: const Center(child: CircularProgressIndicator()),
@@ -88,11 +98,7 @@ class PlanetDetailScreen extends ConsumerWidget {
               children: [
                 Flexible(
                   fit: FlexFit.tight,
-                  child: Column(
-                    children: [
-                      planetImage,
-                    ],
-                  ),
+                  child: planetImage,
                 ),
                 const SizedBox(width: 20),
                 Flexible(
