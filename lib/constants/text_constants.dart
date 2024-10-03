@@ -52,5 +52,5 @@ const kTextFieldInputDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 10.0),
 );
 
-const _borderRadius = BorderRadius.all(Radius.circular(86));
+const _borderRadius = BorderRadius.all(Radius.circular(5));
 const _borderSide = BorderSide(color: kSilver);

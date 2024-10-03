@@ -17,6 +17,7 @@ class PlanetListScreen extends ConsumerWidget {
     final notifier = ref.read(planetListControllerProvider.notifier);
 
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: kPagePadding,
         child: Center(
