@@ -42,6 +42,14 @@ Ensure you have a device or emulator set up and run:
 flutter run
 ```
 
+### Running on Web
+
+If running on web, due to CORS policies, use the following command:
+
+```bash
+flutter run -d chrome --web-browser-flag --disable-web-security
+```
+
 ### Architecture
 
 **Three Planets** follows clean architecture principles to ensure modular, maintainable code. The app uses Riverpod for state management and SharedPreferences for local data persistence, such as storing favorite planets.
